@@ -32,3 +32,13 @@ details{margin-top:12px;border:1px solid var(--line);border-radius:8px;padding:8
 @media (min-width:640px){h1{font-size:2rem}.ctas{display:flex;flex-wrap:wrap;gap:8px}.ctas .btn{width:auto;flex:1 1 200px;margin:0}.states ul{columns:3}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
 .q{margin:.35em 0;padding-left:20px}.q li{margin:.2em 0}
+
+.stlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:.5rem}
+@media(min-width:640px){.stlist{grid-template-columns:1fr 1fr}}
+.st a,.st.soon,.st.na{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.8rem 1rem;border:1px solid #d5dbe5;border-radius:10px;text-decoration:none;min-height:48px}
+.st.live a{background:#0b1f3a;color:#fff;font-weight:600}
+.st.live a:hover,.st.live a:focus{background:#16345f}
+.st .pr{font-size:.9rem;text-align:right}
+.st.soon,.st.na{background:#f4f6f9;color:#334}
+.st.soon .nm,.st.na .nm{font-weight:600}
+a.pick{color:#e3cf8f;font-weight:600}

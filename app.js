@@ -37,9 +37,19 @@
       if (stO.length) h += '<details><summary>Other ' + esc(name) + ' benefits with different rules (' + stO.length + ')</summary>' + list(stO) + '</details>';
       h += '<div class="ctas"><a class="btn primary" href="' + esc(live.checklist_url) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
     } else {
-      h += '<h3>' + esc(name) + '</h3><p>Our ' + esc(name) + ' checklist is coming soon.</p>';
-      h += '<div class="ctas"><a class="btn primary" href="' + esc(L.guide) + '" rel="noopener">Coming soon. Get the $9.99 guide</a>';
+      var ck = (DATA.checklist_states || []).filter(function (s) { return s.name === name; })[0];
+      if (ck) {
+        h += '<h3>' + esc(name) + '</h3><p>' + esc(name) + ' benefits aren\'t in this checker yet, but our ' + esc(name) + ' checklist is ready.</p>';
+        h += '<div class="ctas"><a class="btn primary" href="' + esc(ck.checklist_url) + '" rel="noopener">Get the ' + esc(name) + ' checklist ($5)</a>';
+      } else if (name === 'District of Columbia') {
+        h += '<h3>' + esc(name) + '</h3><p>We don\'t have a DC checklist. The full guide covers every state + DC.</p>';
+        h += '<div class="ctas"><a class="btn primary" href="' + esc(L.guide) + '" rel="noopener">Get the full guide ($9.99)</a>';
+      } else {
+        h += '<h3>' + esc(name) + '</h3><p>Our ' + esc(name) + ' checklist isn\'t out yet. The full guide covers every state + DC.</p>';
+        h += '<div class="ctas"><a class="btn primary" href="' + esc(L.guide) + '" rel="noopener">Get the full guide ($9.99)</a>';
+      }
     }
+    h += '<a class="btn" href="states/">Pick your state (A–Z)</a>';
     h += '<a class="btn" href="' + esc(L.free_checklist) + '" rel="noopener">Free 100% P&amp;T checklist</a>';
     h += '<a class="btn" href="' + esc(L.subscribe) + '" rel="noopener">Subscribe on YouTube</a></div>';
     h += FOOT + '</div>';
