@@ -7957,6 +7957,11 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/alabama-disabled-veteran-benefits-checklist"
   },
   {
+   "name": "Alaska",
+   "slug": "alaska",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/alaska-disabled-veteran-benefits-checklist"
+  },
+  {
    "name": "Arizona",
    "slug": "arizona",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/arizona-disabled-veteran-benefits-checklist"
@@ -7982,6 +7987,11 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/connecticut-disabled-veteran-benefits-checklist"
   },
   {
+   "name": "Delaware",
+   "slug": "delaware",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/delaware-disabled-veteran-benefits-checklist"
+  },
+  {
    "name": "Florida",
    "slug": "florida",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/florida-disabled-veteran-benefits-checklist"
@@ -7990,6 +8000,16 @@
    "name": "Georgia",
    "slug": "georgia",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/georgia-disabled-veteran-benefits-checklist"
+  },
+  {
+   "name": "Hawaii",
+   "slug": "hawaii",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/hawaii-disabled-veteran-benefits-checklist"
+  },
+  {
+   "name": "Idaho",
+   "slug": "idaho",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/idaho-disabled-veteran-benefits-checklist"
   },
   {
    "name": "Illinois",
@@ -8022,6 +8042,11 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/louisiana-disabled-veteran-benefits-checklist"
   },
   {
+   "name": "Maine",
+   "slug": "maine",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/maine-disabled-veteran-benefits-checklist"
+  },
+  {
    "name": "Maryland",
    "slug": "maryland",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/maryland-disabled-veteran-benefits-checklist"
@@ -8052,9 +8077,24 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/missouri-disabled-veteran-benefits-checklist"
   },
   {
+   "name": "Montana",
+   "slug": "montana",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/montana-disabled-veteran-benefits-checklist"
+  },
+  {
+   "name": "Nebraska",
+   "slug": "nebraska",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/nebraska-disabled-veteran-benefits-checklist"
+  },
+  {
    "name": "Nevada",
    "slug": "nevada",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/nevada-disabled-veteran-benefits-checklist"
+  },
+  {
+   "name": "New Hampshire",
+   "slug": "new-hampshire",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/new-hampshire-disabled-veteran-benefits-checklist"
   },
   {
    "name": "New Jersey",
@@ -8077,6 +8117,11 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/north-carolina-disabled-veteran-benefits-checklist"
   },
   {
+   "name": "North Dakota",
+   "slug": "north-dakota",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/north-dakota-disabled-veteran-benefits-checklist"
+  },
+  {
    "name": "Ohio",
    "slug": "ohio",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/ohio-disabled-veteran-benefits-checklist"
@@ -8097,9 +8142,19 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/pa-disabled-veteran-benefits-checklist"
   },
   {
+   "name": "Rhode Island",
+   "slug": "rhode-island",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/rhode-island-disabled-veteran-benefits-checklist"
+  },
+  {
    "name": "South Carolina",
    "slug": "south-carolina",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/south-carolina-disabled-veteran-benefits-checklist"
+  },
+  {
+   "name": "South Dakota",
+   "slug": "south-dakota",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/south-dakota-disabled-veteran-benefits-checklist"
   },
   {
    "name": "Tennessee",
@@ -8115,6 +8170,11 @@
    "name": "Utah",
    "slug": "utah",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/utah-disabled-veteran-benefits-checklist"
+  },
+  {
+   "name": "Vermont",
+   "slug": "vermont",
+   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/vermont-disabled-veteran-benefits-checklist"
   },
   {
    "name": "Virginia",
@@ -8135,68 +8195,6 @@
    "name": "Wisconsin",
    "slug": "wisconsin",
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/wisconsin-disabled-veteran-benefits-checklist"
-  }
- ],
- "upcoming_states": [
-  {
-   "name": "Alaska",
-   "slug": "alaska",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/alaska-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Delaware",
-   "slug": "delaware",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/delaware-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Hawaii",
-   "slug": "hawaii",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/hawaii-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Idaho",
-   "slug": "idaho",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/idaho-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Maine",
-   "slug": "maine",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/maine-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Montana",
-   "slug": "montana",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/montana-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Nebraska",
-   "slug": "nebraska",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/nebraska-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "New Hampshire",
-   "slug": "new-hampshire",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/new-hampshire-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "North Dakota",
-   "slug": "north-dakota",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/north-dakota-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Rhode Island",
-   "slug": "rhode-island",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/rhode-island-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "South Dakota",
-   "slug": "south-dakota",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/south-dakota-disabled-veteran-benefits-checklist"
-  },
-  {
-   "name": "Vermont",
-   "slug": "vermont",
-   "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/vermont-disabled-veteran-benefits-checklist"
   },
   {
    "name": "Wyoming",
@@ -8204,11 +8202,12 @@
    "checklist_url": "https://vetbenefitsplaybook.gumroad.com/l/wyoming-disabled-veteran-benefits-checklist"
   }
  ],
+ "upcoming_states": [],
  "not_available": [
   {
    "name": "District of Columbia",
    "note": "No DC checklist. The full guide covers every state + DC."
   }
  ],
- "checklists_checked": "2026-11-03"
+ "checklists_checked": "2026-11-05"
 }
