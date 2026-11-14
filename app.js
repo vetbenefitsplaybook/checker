@@ -30,6 +30,7 @@
     var stM = st.filter(function (b) { return matches(b.match, r, pt); });
     var stO = st.filter(function (b) { return !matches(b.match, r, pt); });
     var h = '<div class="panel result"><h2 tabindex="-1" id="rh">Benefits to look into: ' + esc(name) + ', ' + r + '%' + (pt ? ', P&amp;T' : '') + '</h2>';
+    var showPlaybookBtn = false;
     h += '<p class="meta">These are starting points, not a decision about what you get. Each item has more rules on its official page.</p>';
     var fedO = fed.filter(function (b) { return !matches(b.match, r, pt); });
     h += '<h3>Federal</h3>' + list(fedM);
@@ -37,15 +38,21 @@
     if (live) {
       h += '<h3>' + esc(name) + '</h3><p class="meta">Last verified ' + esc(live.last_verified) + '</p>' + list(stM);
       if (stO.length) h += '<details><summary>Other ' + esc(name) + ' benefits with different rules (' + stO.length + ')</summary>' + list(stO) + '</details>';
+      h += '<p class="meta">Want the federal list plus a state-by-state section in one place? The 100% P&amp;T Benefits Playbook ($9.99): <a href="' + esc(L.guide) + '" rel="noopener">' + esc(L.guide) + '</a></p>';
+      showPlaybookBtn = true;
       h += '<div class="ctas"><a class="btn primary" href="' + esc(gum(live.checklist_url)) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
     } else {
       var ck = (DATA.checklist_states || []).filter(function (s) { return s.name === name; })[0];
       if (ck && PAGES[name]) {
         h += '<h3>' + esc(name) + '</h3><p>This filter lists federal benefits only. ' + esc(name) + ' state benefits are on the free state page. This checker does not screen them by rating.</p>';
+        h += '<p class="meta">Want the federal list plus a state-by-state section in one place? The 100% P&amp;T Benefits Playbook ($9.99): <a href="' + esc(L.guide) + '" rel="noopener">' + esc(L.guide) + '</a></p>';
+        showPlaybookBtn = true;
         h += '<div class="ctas"><a class="btn primary" href="' + esc(PAGES[name]) + '/">Browse ' + esc(name) + ' state benefits</a>';
         h += '<a class="btn" href="' + esc(gum(ck.checklist_url)) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
       } else if (ck) {
         h += '<h3>' + esc(name) + '</h3><p>' + esc(name) + ' benefits aren\'t in this filter. The ' + esc(name) + ' checklist is ready.</p>';
+        h += '<p class="meta">Want the federal list plus a state-by-state section in one place? The 100% P&amp;T Benefits Playbook ($9.99): <a href="' + esc(L.guide) + '" rel="noopener">' + esc(L.guide) + '</a></p>';
+        showPlaybookBtn = true;
         h += '<div class="ctas"><a class="btn primary" href="' + esc(gum(ck.checklist_url)) + '" rel="noopener">Get the ' + esc(name) + ' checklist ($5)</a>';
       } else if (name === 'District of Columbia') {
         h += '<h3>' + esc(name) + '</h3><p>We don\'t have a DC checklist. The full guide covers every state + DC.</p>';
@@ -57,6 +64,9 @@
     }
     h += '<a class="btn" href="states/">Pick your state (A–Z)</a>';
     h += '<a class="btn" href="' + esc(gum(L.free_checklist)) + '" rel="noopener">Free 100% P&amp;T checklist</a>';
+    if (showPlaybookBtn) {
+      h += '<a class="btn" href="' + esc(L.guide) + '" rel="noopener">Get the full Playbook ($9.99)</a>';
+    }
     h += '<a class="btn" href="' + esc(L.subscribe) + '" rel="noopener">Subscribe on YouTube</a></div>';
     h += FOOT + '</div>';
     out.innerHTML = h;
