@@ -33,7 +33,7 @@
     var h = '<div class="panel result"><h2 tabindex="-1" id="rh">Benefits to look into: ' + esc(name) + ', ' + r + '%' + (pt ? ', P&amp;T' : '') + '</h2>';
     var BUY = '<a class="btn buy" href="' + esc(gum(BUNDLE)) + '" rel="noopener">Get the Playbook + all 50 state checklists ($19.99)</a>' +
       '<a class="btn alt" href="' + esc(gum(L.guide)) + '" rel="noopener">Just the Playbook ($9.99)</a>';
-    h += '<div class="buybox"><p class="bb-h">Get every benefit in one guide</p>' + BUY + '</div>';
+    h += '<div class="buybox"><p class="bb-h">Get the Playbook and all 50 state checklists</p>' + BUY + '</div>';
     h += '<p class="meta">These are starting points, not a decision about what you get. Each item has more rules on its official page.</p>';
     var fedO = fed.filter(function (b) { return !matches(b.match, r, pt); });
     h += '<h3>Federal</h3>' + list(fedM);
