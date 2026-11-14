@@ -4,6 +4,7 @@
   var selState = document.getElementById('state'), selRating = document.getElementById('rating');
   var PAGES={"Alaska": "alaska", "Arkansas": "arkansas", "Connecticut": "connecticut", "Delaware": "delaware", "Hawaii": "hawaii", "Idaho": "idaho", "Iowa": "iowa", "Kansas": "kansas", "Kentucky": "kentucky", "Louisiana": "louisiana", "Maine": "maine", "Massachusetts": "massachusetts", "Minnesota": "minnesota", "Mississippi": "mississippi", "Montana": "montana", "Nebraska": "nebraska", "Nevada": "nevada", "New Hampshire": "new-hampshire", "New Jersey": "new-jersey", "New Mexico": "new-mexico", "North Dakota": "north-dakota", "Oklahoma": "oklahoma", "Oregon": "oregon", "Rhode Island": "rhode-island", "South Dakota": "south-dakota", "Utah": "utah", "Vermont": "vermont", "West Virginia": "west-virginia", "Wyoming": "wyoming"};
   var DATA = null;
+  var BUNDLE = 'https://vetbenefitsplaybook.gumroad.com/l/disabled-veteran-benefits-by-state';
   function gum(url){if(!url||(url.indexOf('gumroad.com')<0&&url.indexOf('shop.vetbenefitsplaybook.com')<0))return url;if(url.indexOf('referrer=')>=0)return url;return url+(url.indexOf('?')>=0?'&':'?')+'referrer='+encodeURIComponent('https://vetbenefitsplaybook.com/checker');}
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function matches(m, r, pt) {
@@ -30,7 +31,9 @@
     var stM = st.filter(function (b) { return matches(b.match, r, pt); });
     var stO = st.filter(function (b) { return !matches(b.match, r, pt); });
     var h = '<div class="panel result"><h2 tabindex="-1" id="rh">Benefits to look into: ' + esc(name) + ', ' + r + '%' + (pt ? ', P&amp;T' : '') + '</h2>';
-    var showPlaybookBtn = false;
+    var BUY = '<a class="btn buy" href="' + esc(gum(BUNDLE)) + '" rel="noopener">Get the Playbook + all 50 state checklists ($19.99)</a>' +
+      '<a class="btn alt" href="' + esc(gum(L.guide)) + '" rel="noopener">Just the Playbook ($9.99)</a>';
+    h += '<div class="buybox"><p class="bb-h">Get every benefit in one guide</p>' + BUY + '</div>';
     h += '<p class="meta">These are starting points, not a decision about what you get. Each item has more rules on its official page.</p>';
     var fedO = fed.filter(function (b) { return !matches(b.match, r, pt); });
     h += '<h3>Federal</h3>' + list(fedM);
@@ -38,35 +41,26 @@
     if (live) {
       h += '<h3>' + esc(name) + '</h3><p class="meta">Last verified ' + esc(live.last_verified) + '</p>' + list(stM);
       if (stO.length) h += '<details><summary>Other ' + esc(name) + ' benefits with different rules (' + stO.length + ')</summary>' + list(stO) + '</details>';
-      h += '<p class="meta">Want the federal list plus a state-by-state section in one place? The 100% P&amp;T Benefits Playbook ($9.99): <a href="' + esc(L.guide) + '" rel="noopener">' + esc(L.guide) + '</a></p>';
-      showPlaybookBtn = true;
-      h += '<div class="ctas"><a class="btn primary" href="' + esc(gum(live.checklist_url)) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
+      h += '<div class="ctas">' + BUY + '<a class="btn" href="' + esc(gum(live.checklist_url)) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
     } else {
       var ck = (DATA.checklist_states || []).filter(function (s) { return s.name === name; })[0];
       if (ck && PAGES[name]) {
         h += '<h3>' + esc(name) + '</h3><p>This filter lists federal benefits only. ' + esc(name) + ' state benefits are on the free state page. This checker does not screen them by rating.</p>';
-        h += '<p class="meta">Want the federal list plus a state-by-state section in one place? The 100% P&amp;T Benefits Playbook ($9.99): <a href="' + esc(L.guide) + '" rel="noopener">' + esc(L.guide) + '</a></p>';
-        showPlaybookBtn = true;
-        h += '<div class="ctas"><a class="btn primary" href="' + esc(PAGES[name]) + '/">Browse ' + esc(name) + ' state benefits</a>';
-        h += '<a class="btn" href="' + esc(gum(ck.checklist_url)) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
+        h += '<div class="ctas">' + BUY + '<a class="btn" href="' + esc(gum(ck.checklist_url)) + '" rel="noopener">Get the full ' + esc(name) + ' checklist ($5)</a>';
+        h += '<a class="btn" href="' + esc(PAGES[name]) + '/">Browse ' + esc(name) + ' state benefits</a>';
       } else if (ck) {
         h += '<h3>' + esc(name) + '</h3><p>' + esc(name) + ' benefits aren\'t in this filter. The ' + esc(name) + ' checklist is ready.</p>';
-        h += '<p class="meta">Want the federal list plus a state-by-state section in one place? The 100% P&amp;T Benefits Playbook ($9.99): <a href="' + esc(L.guide) + '" rel="noopener">' + esc(L.guide) + '</a></p>';
-        showPlaybookBtn = true;
-        h += '<div class="ctas"><a class="btn primary" href="' + esc(gum(ck.checklist_url)) + '" rel="noopener">Get the ' + esc(name) + ' checklist ($5)</a>';
+        h += '<div class="ctas">' + BUY + '<a class="btn" href="' + esc(gum(ck.checklist_url)) + '" rel="noopener">Get the ' + esc(name) + ' checklist ($5)</a>';
       } else if (name === 'District of Columbia') {
         h += '<h3>' + esc(name) + '</h3><p>We don\'t have a DC checklist. The full guide covers every state + DC.</p>';
-        h += '<div class="ctas"><a class="btn primary" href="' + esc(gum(L.guide)) + '" rel="noopener">Get the full guide ($9.99)</a>';
+        h += '<div class="ctas">' + BUY;
       } else {
         h += '<h3>' + esc(name) + '</h3><p>Our ' + esc(name) + ' checklist isn\'t out yet. The full guide covers every state + DC.</p>';
-        h += '<div class="ctas"><a class="btn primary" href="' + esc(gum(L.guide)) + '" rel="noopener">Get the full guide ($9.99)</a>';
+        h += '<div class="ctas">' + BUY;
       }
     }
-    h += '<a class="btn" href="states/">Pick your state (A–Z)</a>';
     h += '<a class="btn" href="' + esc(gum(L.free_checklist)) + '" rel="noopener">Free 100% P&amp;T checklist</a>';
-    if (showPlaybookBtn) {
-      h += '<a class="btn" href="' + esc(L.guide) + '" rel="noopener">Get the full Playbook ($9.99)</a>';
-    }
+    h += '<a class="btn" href="states/">Pick your state (A–Z)</a>';
     h += '<a class="btn" href="' + esc(L.subscribe) + '" rel="noopener">Subscribe on YouTube</a></div>';
     h += FOOT + '</div>';
     out.innerHTML = h;

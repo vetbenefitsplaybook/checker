@@ -42,3 +42,9 @@ details{margin-top:12px;border:1px solid var(--line);border-radius:8px;padding:8
 .st.soon,.st.na{background:#f4f6f9;color:#334}
 .st.soon .nm,.st.na .nm{font-weight:600}
 a.pick{color:#e3cf8f;font-weight:600}
+.buybox{background:var(--navy);border:3px solid var(--gold);border-radius:12px;padding:14px;margin:12px 0 16px}
+.buybox .bb-h{margin:0 0 6px;color:var(--gold);font-weight:800;font-size:1.25rem;line-height:1.25;text-align:center}
+.btn.buy{background:var(--gold);border-color:var(--gold);color:var(--navy);font-size:1.2rem;font-weight:800;line-height:1.25;padding:16px;min-height:64px}
+.btn.alt{font-size:1.1rem;min-height:56px}
+.buybox .btn.alt{background:#fff;border-color:#fff;color:var(--navy)}
+.ctas .btn.buy{border-color:var(--navy)}
